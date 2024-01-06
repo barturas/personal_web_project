@@ -9,14 +9,21 @@
             font-family: Verdana, sans-serif;
             background-color: black;
         }
-        .centered-text {
+        .centered-content {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            color: white;
             text-align: center;
-	          font-size: 5vw;
+        }
+        .centered-content img {
+            max-width: 50%;
+            height: auto;
+        }
+        .centered-text {
+            color: white;
+            font-size: 2vw;
+            margin-top: 20px; /* Adjust space between image and text */
         }
         .background {
             background-color: black;
@@ -26,8 +33,11 @@
 </head>
 <body>
     <div class="background">
-        <div class="centered-text">
-            Crystal ball, show me the future ...
+        <div class="centered-content">
+            <img src="img/ball_w.jpg" alt="Crystal Ball">
+            <div class="centered-text">
+                Crystal ball, show me the future ...
+            </div>
         </div>
     </div>
 </body>
