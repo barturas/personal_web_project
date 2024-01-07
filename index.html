@@ -1,47 +1,16 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <title>Journey begins here</title>
-    <style>
-        body, html {
-            height: 100%;
-            margin: 0;
-            font-family: Verdana, sans-serif;
-            background-color: black;
-        }
-        .centered-content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-        }
-        .centered-content img {
-            max-width: 70%;
-            height: auto;
-        }
-        .centered-text {
-            color: white;
-            font-size: 5vw;
-            margin-top: 20px; /* Adjust space between image and text */
-        }
-        .background {
-            background-color: black;
-            height: 100%;
-        }
-    </style>
-</head>
-<body>
-    <div class="background">
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Animation</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
         <div class="centered-content">
-            <img src="img/ball_w.jpg" alt="Crystal Ball">
-            <div class="centered-text">
-                Crystal ball, show me the future ...
-            </div>
-        </div>
-    </div>
-</body>
+        <img src="img/ball_w.jpg" alt="Crystal Ball"></div>
+        <div id="spiral" class="spiral"></div>
+        <div id="spiral2" class="spiral"></div>
+        <script src="script.js"></script>
+    </body>
 </html>
-
-
-
