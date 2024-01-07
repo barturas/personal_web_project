@@ -1,4 +1,4 @@
-const words = "Crystal ball, show me the future"; // add more words as needed
+const words = "Crystal ball, show me the future";
 
 const ANIMATION_DURATION = 4000; //ns
 
