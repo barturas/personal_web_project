@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking form</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+    
+    body {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 20px;
+            display: flex;
+            justify-content: center;
+            background-color: rgb(33, 33, 33);
+        
+    }
+        .div_form_items {
+            margin: 10px;
+            background-color: rgb(191, 191, 213);
+            border: 1px solid white;
+            border-radius: 7px;
+        }
+
+            .form_items {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .dates_guests {
+            display: flex;
+            
+        }
+
+        label {
+            color: white;
+            display: block;
+            margin: 3px;
+        }
+        .destination, .date, .guests {
+            margin:  1px;
+        }
+        .submit_button {
+            margin: 1px;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        #submit_button:hover {
+            background-color: #fcd50f;
+        }
+    
+    @media (min-width: 769px) {
+
+
+        #selection, #to_date, #from_date, #guests, #submit_button {
+            margin: 5px;
+            padding: 5px;
+            box-sizing: border-box;
+            border: 1px solid white;
+            border-radius: 7px;
+            height: 40px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+            background-color: rgb(236, 236, 236);
+            
+        }
+        #submit_button {
+            cursor: pointer;
+            background-color: #ffdd33;
+            font-size: 20px;
+            width: 50px;
+        }
+    }
+
+    @media (max-width: 768px) {
+
+        .destination, .submit_button {
+
+            width: 456px;
+        }
+
+        .date, .guests {
+            display: grid;
+            
+        }
+
+
+        #selection, #to_date, #from_date, #guests, #submit_button {
+            margin: 5px;
+            padding: 5px;
+            box-sizing: border-box;
+            border: 1px solid white;
+            border-radius: 7px;
+            height: 40px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+            background-color: rgb(236, 236, 236);
+            
+        }
+        #selection {
+            width: 450px;
+
+        }
+        
+        #submit_button {
+            min-width: 45px;
+            cursor: pointer;
+            background-color: #ffdd33;
+            font-size: 20px;
+            width: 450px;
+
+        }
+        #to_date, #from_date, #guests {
+            width: 140px;
+        }
+    }
+
+
+</style>
+<body>
+    <div class="div_form_items">
+        <form class="form_items">
+            <div class="destination">
+                <label for="destination">Destination</label>
+                <select id="selection" name="destination">
+                    <option value="" disabled selected hidden>Destination</option>
+                    <option value="paris">Paris</option>
+                    <option value="tokyo">Tokyo</option>
+                    <option value="sydney">Sydney</option>
+                    <option value="san francisco">San Francisco</option>
+                </select>
+            </div>
+            <div class="dates_guests">
+                <div class="date">
+                    <label for="date">From</label>
+                    <input type="date" name="from_date" id="to_date">
+                </div>
+                <div class="date">
+                    <label for="date">To</label>
+                    <input type="date" name="to_date" id="from_date">
+                </div>
+                <div class="guests">
+                    <label for="guests">Guests</label>
+                    <input type="number" name="guests" id="guests" min="1" value="1">
+                </div>
+            </div>
+            <div class="submit_button">
+              <button id="submit_button" type="submit">↩</button>
+            </div>
+          </form>
+    </div>
+    
+</body>
+</html>
