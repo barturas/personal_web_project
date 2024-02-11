@@ -17,18 +17,24 @@
         
     }
         .div_form_items {
+            flex-grow:  1; /* Grow to fill available space */
+            flex-shrink:  1; /* Allow shrinking if necessary */
+            /* flex-basis:  0; Start from zero width */
+
             margin: 10px;
             background-color: rgb(191, 191, 213);
             border: 1px solid white;
             border-radius: 7px;
         }
 
-            .form_items {
+        .form_items {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            max-width: 100%;
-            box-sizing: border-box;
+            flex-grow:  1; /* Grow to fill available space */
+            flex-shrink:  1; /* Allow shrinking if necessary */
+            flex-basis:  0; /* Start from zero width */
+
         }
 
         .dates_guests {
@@ -40,6 +46,7 @@
             color: white;
             font-size: 1.2rem;
             display: block;
+            justify-content: center;
             margin: 3px;
         }
         .destination, .date, .guests {
@@ -82,53 +89,85 @@
 
     @media (max-width: 768px) {
 
-        .div_form_items {
-            width:min-content;
-        }
         
-        .destination, .submit_button {
-            
-            width: 366px;
+        .destination {
+            display: grid;
         }
+
+        .destination, .submit_button, .dates_guests {
+            box-sizing: border-box;
+            flex-grow:  1; 
+            flex-shrink:  1; 
+            flex-basis:  0; 
+
+        }
+
 
         label {
             font-size: 1rem;
+
         }
+
+        .dates_guests {
+
+            display: flex;
+            flex-grow:  1; /* Grow to fill available space */
+            flex-shrink:  1; /* Allow shrinking if necessary */
+            flex-basis: 0;
+
+
+        }
+
         .date, .guests {
-            display: grid;
-            place-items: left;
-            
+            display: flex;
+            flex-direction: column;
+            flex-grow:  1; /* Grow to fill available space */
+            flex-shrink:  1; /* Allow shrinking if necessary */
+            flex-basis: 0;
+
+
         }
 
 
         #selection, #to_date, #from_date, #guests, #submit_button {
             margin: 5px;
-            padding: 5px;
+            padding: 1px;
             box-sizing: border-box;
             border: 1px solid white;
             border-radius: 7px;
-            height: 30px;
+            min-height: 30px;
             font-family: 'Montserrat', sans-serif;
-            font-size: 1rem;
+            font-size: 2vw;
             background-color: rgb(236, 236, 236);
+            flex-grow:  1; /* Grow to fill available space */
+            flex-shrink:  1; 
+            flex-basis: 0;
+
+
+
             
         }
         #selection {
-            width: 356px;
-
+            min-width: 300px;
         }
-        
+
         #submit_button {
-            min-width: 45px;
+
             cursor: pointer;
             background-color: #ffdd33;
             font-size: 1rem;
             font-weight: bolder;
-            width: 380px;
+            min-width: 300px;
+
 
         }
         #to_date, #from_date, #guests {
-            width: 110px;
+            min-width: 100px;
+            box-sizing: border-box;
+            flex-grow:  1; /* Grow to fill available space */
+            flex-shrink:  1; 
+            flex-basis: 0;
+
         }
     }
 
@@ -140,7 +179,7 @@
             <div class="destination">
                 <label for="destination">Destination</label>
                 <select id="selection" name="destination">
-                    <option value="" disabled selected hidden>Destination</option>
+                    <option value="" disabled selected hidden>Select</option>
                     <option value="paris">Paris</option>
                     <option value="tokyo">Tokyo</option>
                     <option value="sydney">Sydney</option>
