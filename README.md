@@ -28,7 +28,7 @@ As this is a personal project, contributions are currently not being accepted. H
 
 ## License
 
-[MIT License](LICENSE.md)
+[MIT License](LICENSE)
 
 This project is open source and available under the MIT License. See the LICENSE file for more information.
 
