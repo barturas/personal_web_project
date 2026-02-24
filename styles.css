@@ -36,10 +36,10 @@ html {
 
 @keyframes spiral {
   0% {
-    --angle: 360deg;
+    --angle: 0deg;
   }
   100% {
-    --angle: 0deg;
+    --angle: 360deg;
   }
 }
 
