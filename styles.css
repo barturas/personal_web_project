@@ -39,7 +39,7 @@ html {
     --angle: 0deg;
   }
   100% {
-    --angle: -360deg;
+    --angle: 360deg;
   }
 }
 

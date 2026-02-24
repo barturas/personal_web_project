@@ -8,7 +8,7 @@ const characters = words.split('').forEach((char, i) => {
     const div = document.createElement('div');
     div.innerText = char;
     div.classList.add('character');
-    div.style.animationDelay = `${i * (ANIMATION_DURATION / 10) - offset}ms`;
+    div.style.animationDelay = `-${(words.length - 1 - i) * (ANIMATION_DURATION / 10) - offset}ms`;
     return div;
   }
 
